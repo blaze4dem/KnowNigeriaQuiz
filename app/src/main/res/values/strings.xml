@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Know Nigeria Quiz</string>
+
+    <!-- Introductions  -->
+    <string name="intro">A few things about Nigeria you should know... if you dont already know...</string>
+
+    <!-- Result strings -->
+
+
+    <!-- Name field -->
+    <string name="enter_name">Please fill in your name bellow.</string>
+    <string name="name">You name here...</string>
+    <string name="no_name">Enter your name pleas..</string>
+
+    <!-- Question 1 -->
+    <string name="Question_1">Which picture above is the Nigerian flag?</string>
+    <string name="question_1_a">A</string>
+    <string name="question_1_b">B</string>
+    <string name="question_1_c">C</string>
+    <string name="question_1_d">D</string>
+    <string name="message_info_1">The nigerian flag is green white green vertical strips.</string>
+
+    <!-- Question 2 -->
+    <string name="Question_2">Who is the current president of Nigeria?</string>
+    <string name="question_2_a">Dr Goodluck Jonathan</string>
+    <string name="question_2_b">Abdusalami Abubaka</string>
+    <string name="question_2_c">Muhamadu Buhari</string>
+    <string name="question_2_d">Olusegun Obasanjo</string>
+    <string name="message_info_2">The president of Nigeria is Muhamadu Buhari.</string>
+
+    <!-- Question 3 -->
+    <string name="Question_3">Which of these people are past presidents of Nigeria?</string>
+    <string name="question_3_a">Dr Goodluck Jonathan</string>
+    <string name="question_3_b">Abdusalami Sambo</string>
+    <string name="question_3_c">Muhamadu Buhari</string>
+    <string name="question_3_d">Olusegun Obasanjo</string>
+    <string name="message_info_3">Abdusalami Sambo has never ruled nigeria before.</string>
+
+    <!-- Question 4 -->
+    <string name="Question_4">What is the estimated population of Nigeria as at 2018?</string>
+    <string name="question_4_a">Around 10 million people</string>
+    <string name="question_4_b">Around 50 million people</string>
+    <string name="question_4_c">Around 100 million people</string>
+    <string name="question_4_d">Around 200 million people</string>
+
+    <!-- Question 5 -->
+    <string name="Question_5">In the text field bellow type the year in wich Nigeria gained her independence from the Brits.</string>
+    <string name="question_5_answer">1960</string>
+
+    <!-- Question 6 -->
+    <string name="Question_6">Which is the capital city of Nigeria?</string>
+    <string name="question_6_a">Niger</string>
+    <string name="question_6_b">Abuja</string>
+    <string name="question_6_c">Lagos</string>
+    <string name="question_6_d">Kano</string>
+
+    <!-- Question 7 -->
+    <string name="Question_7">How many languages and cultures do you think are in Nigeria?</string>
+    <string name="question_7_a">About 3 main</string>
+    <string name="question_7_b">More then 400</string>
+    <string name="question_7_c">About 36</string>
+    <string name="question_7_d">More than 700</string>
+
+    <!-- Question 8 -->
+    <string name="Question_8">What is the currency of Nigeria called?</string>
+    <string name="question_8_answer">NAIRA</string>
+
+    <!-- Question 9 -->
+    <string name="Question_9">Which of these languages are native tongues in Nigeria?</string>
+    <string name="question_9_a">Ashanti</string>
+    <string name="question_9_b">Yoruba</string>
+    <string name="question_9_c">Zaye</string>
+    <string name="question_9_d">Igbo</string>
+
+    <!-- Question 10 -->
+    <string name="Question_10">What kind of music do Nigerians listen to?</string>
+    <string name="question_10_a">Afro Beat</string>
+    <string name="question_10_b">Gbedu</string>
+    <string name="question_10_c">High Life</string>
+    <string name="question_10_d">Gyration</string>
+
+</resources>
