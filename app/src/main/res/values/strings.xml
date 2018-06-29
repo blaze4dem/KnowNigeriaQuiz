@@ -42,10 +42,12 @@
     <string name="question_4_b">Around 50 million people</string>
     <string name="question_4_c">Around 100 million people</string>
     <string name="question_4_d">Around 200 million people</string>
+    <string name="message_info_4">Nigeria population is around 200 million people.</string>
 
     <!-- Question 5 -->
     <string name="Question_5">In the text field bellow type the year in wich Nigeria gained her independence from the Brits.</string>
-    <string name="question_5_answer">1960</string>
+    <string name="question_5_a">1960</string>
+    <string name="message_info_5">Nigeria got here independence in 1960.</string>
 
     <!-- Question 6 -->
     <string name="Question_6">Which is the capital city of Nigeria?</string>

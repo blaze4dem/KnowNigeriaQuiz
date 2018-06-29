@@ -52,7 +52,7 @@
                 android:text="Start quiz now" />
         </LinearLayout>
 
-        <!-- .................Questopm 1 begins here ........................ -->
+        <!-- .................Question 1 begins here ........................ -->
 
         <LinearLayout
             android:id="@+id/question_1_view"
@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:onClick="gotoQuestion_2"
+                android:onClick="question_1_check"
                 android:text="next question" />
         </LinearLayout>
 
@@ -183,7 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:onClick="gotoQuestion_3"
+                android:onClick="question_2_check"
                 android:text="next question" />
 
 
@@ -243,10 +243,127 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:onClick="gotoQuestion_4"
+                android:onClick="question_3_check"
                 android:text="next question" />
 
 
+        </LinearLayout>
+
+        <!-- .................Question 4 begins here ........................ -->
+
+        <LinearLayout
+            android:id="@+id/question_4_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nigerias_population" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:text="@string/Question_4"
+                android:textColor="@color/md_blue_grey_800"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/question_4_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:layout_margin="0dp">
+
+                <RadioButton
+                    android:id="@+id/question_4_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question_4_a" />
+
+                <RadioButton
+                    android:id="@+id/question_4_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question_4_b" />
+
+                <RadioButton
+                    android:id="@+id/question_4_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question_4_c" />
+
+                <RadioButton
+                    android:id="@+id/question_4_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question_4_d" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:onClick="question_4_check"
+                android:text="next question" />
+        </LinearLayout>
+
+        <!-- .................Question 5 begins here ........................ -->
+
+        <LinearLayout
+            android:id="@+id/question_5_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nigerian_economy" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:text="@string/Question_5"
+                android:textColor="@color/md_blue_grey_800"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:hint="Year"
+                android:id="@+id/question_5_answer"
+                android:padding="8dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:onClick="question_4_check"
+                android:text="next question" />
         </LinearLayout>
 
         <!-- ........ Result view .......................................... -->
