@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
         // Get the text from the edit text view
 
         EditText get_answer = (EditText) findViewById(R.id.question_5_answer);
-        String question_5_answere = get_answer.toString().toUpperCase();
+        String question_5_answere = get_answer.toString();
 
         // check if user ansered the question or not ........
 
