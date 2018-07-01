@@ -14,7 +14,7 @@
             android:id="@+id/intro_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
+            android:background="@color/md_teal_300"
             android:orientation="vertical"
             android:padding="16dp"
             android:visibility="visible">
@@ -49,7 +49,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="startQuiz"
-                android:text="Start quiz now" />
+                android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:text="@string/start" />
         </LinearLayout>
 
         <!-- .................Question 1 begins here ........................ -->
@@ -58,7 +60,7 @@
             android:id="@+id/question_1_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
+            android:background="@color/md_lime_100"
             android:orientation="vertical"
             android:padding="16dp"
             android:visibility="gone">
@@ -120,7 +122,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:onClick="question_1_check"
-                android:text="next question" />
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:text="@string/next" />
         </LinearLayout>
 
         <!-- .................Question 2  begins here ........................ -->
@@ -129,7 +133,7 @@
             android:id="@+id/question_2_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
+            android:background="@color/md_lime_100"
             android:orientation="vertical"
             android:padding="16dp"
             android:visibility="gone">
@@ -184,7 +188,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:onClick="question_2_check"
-                android:text="next question" />
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:text="@string/next" />
 
 
         </LinearLayout>
@@ -195,7 +201,7 @@
             android:id="@+id/question_3_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
+            android:background="@color/md_lime_100"
             android:orientation="vertical"
             android:padding="16dp"
             android:visibility="gone">
@@ -244,7 +250,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:onClick="question_3_check"
-                android:text="next question" />
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:text="@string/next" />
 
 
         </LinearLayout>
@@ -255,7 +263,7 @@
             android:id="@+id/question_4_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
+            android:background="@color/md_lime_100"
             android:orientation="vertical"
             android:padding="16dp"
             android:visibility="gone">
@@ -313,7 +321,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:onClick="question_4_check"
-                android:text="next question" />
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:text="@string/next" />
         </LinearLayout>
 
         <!-- .................Question 5 begins here ........................ -->
@@ -322,7 +332,7 @@
             android:id="@+id/question_5_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
+            android:background="@color/md_lime_100"
             android:orientation="vertical"
             android:padding="16dp"
             android:visibility="gone">
@@ -353,6 +363,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="20dp"
                 android:hint="Year"
+                android:inputType="phone"
                 android:id="@+id/question_5_answer"
                 android:padding="8dp"/>
 
@@ -363,7 +374,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:onClick="question_5_check"
-                android:text="next question" />
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:text="@string/result_page" />
         </LinearLayout>
 
         <!-- ........ Result view .......................................... -->
@@ -379,8 +392,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Thank You for taking this quiz"
-                android:textSize="20dp" />
+                android:paddingBottom="16dp"
+                android:text="@string/thanks" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="result"
+                android:text="@string/submit"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -389,16 +408,10 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/result"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp" />
-
-                <TextView
                     android:id="@+id/failed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="8dp" />
+                    android:padding="8sp" />
 
             </LinearLayout>
 
@@ -406,19 +419,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Send result to a friend, Help them know Nigeria" />
+                android:text="@string/send_email" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="email"
-                android:text="email result" />
+                android:text="@string/email" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="reset"
-                android:text="Reset quiz" />
+                android:text="@string/reset" />
         </LinearLayout>
 
     </RelativeLayout>

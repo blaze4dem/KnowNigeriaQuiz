@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import static java.lang.Integer.parseInt;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -28,14 +30,6 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout intro_view; LinearLayout result_view;
     LinearLayout question_1_view; LinearLayout question_2_view; LinearLayout question_3_view; LinearLayout question_4_view;
     LinearLayout question_5_view;
-
-
-//    LinearLayout question_6_view = (LinearLayout) findViewById(R.id.question_6_view);
-//    LinearLayout question_7_view = (LinearLayout) findViewById(R.id.question_7_view);
-//    LinearLayout question_8_view = (LinearLayout) findViewById(R.id.question_8_view);
-//    LinearLayout question_9_view = (LinearLayout) findViewById(R.id.question_9_view);
-//    LinearLayout question_10_view = (LinearLayout) findViewById(R.id.question_10_view);
-
 
     /*
     ............. Introduction page with the edit text for the name... and also setting up all the views.......
@@ -99,10 +93,8 @@ public class MainActivity extends AppCompatActivity {
 
             // Question is not answered so display a toast....
 
-            Toast.makeText(this, "Answer the question pleas", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.no_answer), Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     /*
@@ -138,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
             // Question is not answered to display a toast....
 
-            Toast.makeText(this, "Answer the question pleas", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.no_answer), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -182,9 +174,8 @@ public class MainActivity extends AppCompatActivity {
 
             // Question not answered .........
 
-            Toast.makeText(this, "Answer the question pleas", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.no_answer), Toast.LENGTH_SHORT).show();
         }
-
     }
 
     /*
@@ -210,15 +201,13 @@ public class MainActivity extends AppCompatActivity {
             }else{
                 failed += "Question 4 \n";
             }
-
             question_4_view.setVisibility(View.GONE);
             question_5_view.setVisibility(View.VISIBLE);
-
         }else{
 
             // Question is not answered to display a toast....
 
-            Toast.makeText(this, "Answer the question pleas", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.no_answer), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -231,38 +220,38 @@ public class MainActivity extends AppCompatActivity {
         // Get the text from the edit text view
 
         EditText get_answer = (EditText) findViewById(R.id.question_5_answer);
-        String question_5_answere = get_answer.toString();
+        int question_5_answere;
 
-        // check if user ansered the question or not ........
+        try {
+            // check if user ansered the question or not try input if number........
 
-        if(question_5_answere.equals("")){
+            question_5_answere = (Integer) parseInt(get_answer.getText().toString());
 
-            // User did not andwere the question ....
+                // Question was answered so lets check the answer with the real answer
 
-            Toast.makeText(this, "Answer the question pleas", Toast.LENGTH_SHORT).show();
-        }else{
+                if (question_5_answere == parseInt(getString(R.string.question_5_a))) {
 
-            // Question was answered so lets check the answere with the real answere
+                    // Answer is correct
+                    result += 1;
+                    message += getString(R.string.message_info_5) + " \n";
+                } else {
+                    failed += "Question 5 \n";
+                }
 
-            if(question_5_answere.equals(getString(R.string.question_5_a))){
+                question_5_view.setVisibility(View.GONE);
+                result_view.setVisibility(View.VISIBLE);
 
-                // Answer is correct
-                result += 1;
-                message += getString(R.string.message_info_5) + " \n";
-            }else{
-                failed += "Question 5 \n";
-            }
+        }catch(NumberFormatException nfe) {
 
-            question_5_view.setVisibility(View.GONE);
+            // User did not answer the question or wrong input....
 
-            show_result();
-            result_view.setVisibility(View.VISIBLE);
+            Toast.makeText(this, getString(R.string.no_answer), Toast.LENGTH_SHORT).show();
         }
     }
 
     public void reset(View view){
         result = 0; message = ""; userName = ""; failed = "";
-        result_view.setVisibility(View.INVISIBLE);
+        result_view.setVisibility(View.GONE);
         intro_view.setVisibility(View.VISIBLE);
     }
 
@@ -270,13 +259,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void show_result(){
+    public void result(View view){
 
-        TextView display_result = (TextView) findViewById(R.id.result);
-        display_result.setText(userName + "\n You got " + result + " questions correctly");
+        String result_text = userName + getString(R.string.you_got) + result + getString(R.string.questions_correct);
+        String failed_text;
+        if(failed.equals("")){
+            failed_text = failed;
+        }else{
+            failed_text = getString(R.string.failed) + failed;
+        }
+
+        Toast.makeText(this, result_text, Toast.LENGTH_LONG).show();
 
         TextView display_failed = (TextView) findViewById(R.id.failed);
-        display_failed.setText("You failed \n" + failed);
+        display_failed.setText(failed_text);
 
     }
 

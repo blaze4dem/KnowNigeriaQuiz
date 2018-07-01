@@ -4,8 +4,19 @@
     <!-- Introductions  -->
     <string name="intro">A few things about Nigeria you should know... if you dont already know...</string>
 
-    <!-- Result strings -->
-
+    <!-- Text Strings -->
+    <string name="start">Start quiz</string>
+    <string name="next" >Next question</string>
+    <string name="no_answer" >Pleas answer the question.</string>
+    <string name="reset">Reset quiz</string>
+    <string name="email">Email Result</string>
+    <string name="you_got">\n You got </string>
+    <string name="questions_correct"> questions correctly</string>
+    <string name="result_page">See Result</string>
+    <string name="failed">You failed \n</string>
+    <string name="send_email">Send result to a friend, Help them get to know Nigeria.</string>
+    <string name="thanks">Thank you for taking this quiz, please click the buttn bellow to submit the result and see your answers.</string>
+    <string name="submit">Submit</string>
 
     <!-- Name field -->
     <string name="enter_name">Please fill in your name bellow.</string>
@@ -13,48 +24,54 @@
     <string name="no_name">Enter your name pleas..</string>
 
     <!-- Question 1 -->
-    <string name="Question_1">Which picture above is the Nigerian flag?</string>
+    <string name="Question_1">1. Which picture above is the Nigerian flag?</string>
     <string name="question_1_a">A</string>
     <string name="question_1_b">B</string>
     <string name="question_1_c">C</string>
     <string name="question_1_d">D</string>
     <string name="message_info_1">The nigerian flag is green white green vertical strips.</string>
+    <string name="failed_1" >Question 1 \n</string>
 
     <!-- Question 2 -->
-    <string name="Question_2">Who is the current president of Nigeria?</string>
+    <string name="Question_2">2. Who is the current president of Nigeria?</string>
     <string name="question_2_a">Dr Goodluck Jonathan</string>
     <string name="question_2_b">Abdusalami Abubaka</string>
     <string name="question_2_c">Muhamadu Buhari</string>
     <string name="question_2_d">Olusegun Obasanjo</string>
     <string name="message_info_2">The president of Nigeria is Muhamadu Buhari.</string>
+    <string name="failed_2" >Question 2 \n</string>
 
     <!-- Question 3 -->
-    <string name="Question_3">Which of these people are past presidents of Nigeria?</string>
+    <string name="Question_3">3. Which of these people are past presidents of Nigeria?</string>
     <string name="question_3_a">Dr Goodluck Jonathan</string>
     <string name="question_3_b">Abdusalami Sambo</string>
     <string name="question_3_c">Muhamadu Buhari</string>
     <string name="question_3_d">Olusegun Obasanjo</string>
     <string name="message_info_3">Abdusalami Sambo has never ruled nigeria before.</string>
+    <string name="failed_3" >Question 3 \n</string>
 
     <!-- Question 4 -->
-    <string name="Question_4">What is the estimated population of Nigeria as at 2018?</string>
+    <string name="Question_4">4. What is the estimated population of Nigeria as at 2018?</string>
     <string name="question_4_a">Around 10 million people</string>
     <string name="question_4_b">Around 50 million people</string>
     <string name="question_4_c">Around 100 million people</string>
     <string name="question_4_d">Around 200 million people</string>
     <string name="message_info_4">Nigeria population is around 200 million people.</string>
+    <string name="failed_4" >Question 4 \n</string>
 
     <!-- Question 5 -->
-    <string name="Question_5">In the text field bellow type the year in wich Nigeria gained her independence from the Brits.</string>
+    <string name="Question_5">5. In the text field bellow type the year in wich Nigeria gained her independence from the Brits.</string>
     <string name="question_5_a">1960</string>
     <string name="message_info_5">Nigeria got here independence in 1960.</string>
+    <string name="failed_5" >Question 5 \n</string>
 
     <!-- Question 6 -->
-    <string name="Question_6">Which is the capital city of Nigeria?</string>
+    <string name="Question_6">6. Which is the capital city of Nigeria?</string>
     <string name="question_6_a">Niger</string>
     <string name="question_6_b">Abuja</string>
     <string name="question_6_c">Lagos</string>
     <string name="question_6_d">Kano</string>
+    <string name="failed_6" >Question 6 \n</string>
 
     <!-- Question 7 -->
     <string name="Question_7">How many languages and cultures do you think are in Nigeria?</string>
