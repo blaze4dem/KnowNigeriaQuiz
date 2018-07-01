@@ -2,7 +2,7 @@
     <string name="app_name">Know Nigeria Quiz</string>
 
     <!-- Introductions  -->
-    <string name="intro">A few things about Nigeria you should know... if you dont already know...</string>
+    <string name="intro">A few things about Nigeria you should know, if you don\'t already know..</string>
 
     <!-- Text Strings -->
     <string name="start">Start quiz</string>
@@ -15,12 +15,12 @@
     <string name="result_page">See Result</string>
     <string name="failed">You failed \n</string>
     <string name="send_email">Send result to a friend, Help them get to know Nigeria.</string>
-    <string name="thanks">Thank you for taking this quiz, please click the buttn bellow to submit the result and see your answers.</string>
+    <string name="thanks">Thank you for taking this quiz, please click the button bellow to show the result.</string>
     <string name="submit">Submit</string>
 
     <!-- Name field -->
     <string name="enter_name">Please fill in your name bellow.</string>
-    <string name="name">You name here...</string>
+    <string name="name">You name here..</string>
     <string name="no_name">Enter your name pleas..</string>
 
     <!-- Question 1 -->
@@ -60,18 +60,24 @@
     <string name="failed_4" >Question 4 \n</string>
 
     <!-- Question 5 -->
-    <string name="Question_5">5. In the text field bellow type the year in wich Nigeria gained her independence from the Brits.</string>
+    <string name="Question_5">5. In the text field bellow type the year in which Nigeria gained her independence from the Brits.</string>
     <string name="question_5_a">1960</string>
     <string name="message_info_5">Nigeria got here independence in 1960.</string>
     <string name="failed_5" >Question 5 \n</string>
 
     <!-- Question 6 -->
-    <string name="Question_6">6. Which is the capital city of Nigeria?</string>
-    <string name="question_6_a">Niger</string>
-    <string name="question_6_b">Abuja</string>
-    <string name="question_6_c">Lagos</string>
-    <string name="question_6_d">Kano</string>
+    <string name="Question_6">What is the currency of Nigeria called?</string>
+    <string name="question_6_answer">NAIRA</string>
+    <string name="message_info_6">The Nigerian currency is called Naira</string>
     <string name="failed_6" >Question 6 \n</string>
+
+    <!-- Question 8 -->
+    <string name="Question_8">6. Which is the capital city of Nigeria?</string>
+    <string name="question_8_a">Niger</string>
+    <string name="question_8_b">Abuja</string>
+    <string name="question_8_c">Lagos</string>
+    <string name="question_8_d">Kano</string>
+    <string name="failed_8" >Question 6 \n</string>
 
     <!-- Question 7 -->
     <string name="Question_7">How many languages and cultures do you think are in Nigeria?</string>
@@ -80,9 +86,7 @@
     <string name="question_7_c">About 36</string>
     <string name="question_7_d">More than 700</string>
 
-    <!-- Question 8 -->
-    <string name="Question_8">What is the currency of Nigeria called?</string>
-    <string name="question_8_answer">NAIRA</string>
+
 
     <!-- Question 9 -->
     <string name="Question_9">Which of these languages are native tongues in Nigeria?</string>
