@@ -1,5 +1,7 @@
 package com.example.android.knownigeriaquiz;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     LinearLayout intro_view; LinearLayout result_view;
     LinearLayout question_1_view; LinearLayout question_2_view; LinearLayout question_3_view; LinearLayout question_4_view;
-    LinearLayout question_5_view;
+    LinearLayout question_5_view; LinearLayout question_6_view;
 
     /*
     ............. Introduction page with the edit text for the name... and also setting up all the views.......
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         question_3_view = (LinearLayout) findViewById(R.id.question_3_view);
         question_4_view = (LinearLayout) findViewById(R.id.question_4_view);
         question_5_view = (LinearLayout) findViewById(R.id.question_5_view);
+        question_6_view = (LinearLayout) findViewById(R.id.question_6_view);
 
         // Catch the name entered .......
 
@@ -83,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             result += 1;
             message += getString(R.string.message_info_1) + " \n";
             }else{
-                failed += "Question 1 \n";
+                failed += getString(R.string.x1);
             }
 
             question_1_view.setVisibility(View.GONE);
@@ -118,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 result += 1;
                 message += getString(R.string.message_info_2) + " \n";
             }else{ // answer is false
-                failed += "Question 2 \n";
+                failed += getString(R.string.x2);
             }
 
             // Hide view 2 and move to view 3
@@ -164,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 result += 1;
                 message += getString(R.string.message_info_3) + " \n";
             }else{
-                failed += "Question 3 \n";
+                failed += getString(R.string.x3);
             }
 
             question_3_view.setVisibility(View.GONE);
@@ -199,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
                 result += 1;
                 message += getString(R.string.message_info_4) + " \n";
             }else{
-                failed += "Question 4 \n";
+                failed += getString(R.string.x4);
             }
             question_4_view.setVisibility(View.GONE);
             question_5_view.setVisibility(View.VISIBLE);
@@ -235,11 +238,11 @@ public class MainActivity extends AppCompatActivity {
                     result += 1;
                     message += getString(R.string.message_info_5) + " \n";
                 } else {
-                    failed += "Question 5 \n";
+                    failed += getString(R.string.x5);
                 }
 
                 question_5_view.setVisibility(View.GONE);
-                result_view.setVisibility(View.VISIBLE);
+                question_6_view.setVisibility(View.VISIBLE);
 
         }catch(NumberFormatException nfe) {
 
@@ -249,19 +252,48 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void question_6_check(View view) {
+
+        // Get the text from the edit text view
+
+        EditText get_answer = (EditText) findViewById(R.id.question_6_answer);
+        String question_6_answer = get_answer.getText().toString().toUpperCase();
+
+        if(question_6_answer.equals("")){
+            Toast.makeText(this, getString(R.string.no_answer), Toast.LENGTH_SHORT).show();
+        }else{
+            if(question_6_answer.equals(getString(R.string.question_6_ans))){
+                // Answer is correct
+                result += 1;
+                message += getString(R.string.message_info_5) + " \n";
+            }else{
+                // Answer is false
+                failed += getString(R.string.x6);
+            }
+            question_6_view.setVisibility(View.GONE);
+            result_view.setVisibility(View.VISIBLE);
+        }
+    }
+
     public void reset(View view){
-        result = 0; message = ""; userName = ""; failed = "";
-        result_view.setVisibility(View.GONE);
-        intro_view.setVisibility(View.VISIBLE);
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
     public void email(View view){
-
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.know_nigeria));
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     public void result(View view){
 
-        String result_text = userName + getString(R.string.you_got) + result + getString(R.string.questions_correct);
+        String result_text = userName + getString(R.string.you_got) + " " + result + " " + getString(R.string.questions_correct);
         String failed_text;
         if(failed.equals("")){
             failed_text = failed;

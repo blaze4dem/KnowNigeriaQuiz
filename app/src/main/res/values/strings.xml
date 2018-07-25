@@ -5,12 +5,15 @@
     <string name="intro">A few things about Nigeria you should know, if you don\'t already know..</string>
 
     <!-- Text Strings -->
+    <string name="know_nigeria">Do you know these facts about Nigeria</string>
     <string name="start">Start quiz</string>
     <string name="next" >Next question</string>
     <string name="no_answer" >Pleas answer the question.</string>
     <string name="reset">Reset quiz</string>
     <string name="email">Email Result</string>
     <string name="you_got">\n You got </string>
+    <string name="yr">Year..</string>
+    <string name="text">Currency name..</string>
     <string name="questions_correct"> questions correctly</string>
     <string name="result_page">See Result</string>
     <string name="failed">You failed \n</string>
@@ -66,40 +69,17 @@
     <string name="failed_5" >Question 5 \n</string>
 
     <!-- Question 6 -->
-    <string name="Question_6">What is the currency of Nigeria called?</string>
-    <string name="question_6_answer">NAIRA</string>
+    <string name="Question_6">6. What is the currency of Nigeria called?</string>
+    <string name="question_6_ans">NAIRA</string>
     <string name="message_info_6">The Nigerian currency is called Naira</string>
     <string name="failed_6" >Question 6 \n</string>
 
-    <!-- Question 8 -->
-    <string name="Question_8">6. Which is the capital city of Nigeria?</string>
-    <string name="question_8_a">Niger</string>
-    <string name="question_8_b">Abuja</string>
-    <string name="question_8_c">Lagos</string>
-    <string name="question_8_d">Kano</string>
-    <string name="failed_8" >Question 6 \n</string>
-
-    <!-- Question 7 -->
-    <string name="Question_7">How many languages and cultures do you think are in Nigeria?</string>
-    <string name="question_7_a">About 3 main</string>
-    <string name="question_7_b">More then 400</string>
-    <string name="question_7_c">About 36</string>
-    <string name="question_7_d">More than 700</string>
-
-
-
-    <!-- Question 9 -->
-    <string name="Question_9">Which of these languages are native tongues in Nigeria?</string>
-    <string name="question_9_a">Ashanti</string>
-    <string name="question_9_b">Yoruba</string>
-    <string name="question_9_c">Zaye</string>
-    <string name="question_9_d">Igbo</string>
-
-    <!-- Question 10 -->
-    <string name="Question_10">What kind of music do Nigerians listen to?</string>
-    <string name="question_10_a">Afro Beat</string>
-    <string name="question_10_b">Gbedu</string>
-    <string name="question_10_c">High Life</string>
-    <string name="question_10_d">Gyration</string>
+    <!-- Failed questions text ....... -->
+    <string name="x1">Question 1 \n</string>
+    <string name="x2">Question 2 \n</string>
+    <string name="x3">Question 3 \n</string>
+    <string name="x4">Question 4 \n</string>
+    <string name="x5">Question 5 \n</string>
+    <string name="x6">Question 6 \n</string>
 
 </resources>
